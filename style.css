@@ -1,0 +1,233 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Comic Sans MS';
+    margin: 0;
+    transition: all .3s ease;
+}
+
+body{
+    background: hsl(203, 26%, 14%);
+}
+
+.main-menu{
+    display: none;
+    position: fixed;
+    inset: 0; /* atraks veids neka visus rakstit pec kartas*/
+    background: rgba(44, 26, 44, 90%);
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 3rem;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0;
+}
+.main-menu.show{
+    display: flex;
+}
+
+.main-menu input{
+    padding: 1rem;
+    border-radius: .7rem;
+}
+
+.main-menu button{
+    font-size: 1rem;
+    background: #fff;
+    border: .1rem solid #111;
+    padding: .4rem .3rem;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+.main-menu button:hover{
+    background: #111;
+    color: #fff;
+    border-color: #fff;
+}
+
+.uzvaras-cell{
+    background-color: hsla(118, 74%, 49%, 0.418);
+}
+
+.apraksti{
+    background: #1a252c;
+    margin: 1rem auto;
+    margin-top: 1rem;
+    width: 30rem;
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+h1{
+    color: #fff;
+    text-align: center;
+    font-size: 4rem;
+}
+
+p{
+    color: #fff;
+    text-align: center;
+    margin: .4rem 0;
+    font-size: 1.5rem;  
+}
+
+.krasas{
+    display: flex;
+    position: fixed;
+    top: 0;
+    background: #1a252c;
+    padding: .5rem;
+    align-content: center;
+    margin: 1rem;
+    border-radius: .6rem;
+}
+.btn{
+    font-size: 1rem;
+    background: #fff;
+    border: .1rem solid #111;
+    padding: .4rem .3rem;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+.btn:hover{
+    background: #111;
+    color: #fff;
+    border-color: #fff;
+}
+
+.swap{
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: #1a252c;
+    padding: .5rem;
+    align-content: center;
+    margin: 1rem;
+    border-radius: .6rem;
+}
+
+
+.board{
+    width: 30rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(3, auto);
+    background: #1a252c;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: .5rem;
+}
+
+.cell{
+    width: 8rem;
+    height: 8rem;
+    border: .1rem solid #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.circle:before{
+    content: 'O';
+    font-size: 3rem;
+}
+
+.circle{
+    color: #498afd;
+}
+
+.x:before{
+    content: 'X';
+    font-size: 3rem;
+}
+
+.x{
+    color: #09c372;
+}
+
+.result{
+    display: none;
+    position: fixed;
+    /* top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;  */
+    inset: 0; /* atraks veids neka visus rakstit pec kartas*/
+    background: rgba(44, 26, 44, 90%);
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 3rem;
+    flex-direction: column;
+    gap: 2rem;
+}
+.logs{
+    display: none;
+    position: fixed;
+    inset: 0; /* atraks veids neka visus rakstit pec kartas*/
+    background: rgba(90, 40, 90, 0);
+}
+.logs.show{
+    display: flex;
+}
+
+.result.show{
+    display: flex;
+}
+.score{
+    font-size: 1.5rem;
+}
+.result button{
+    font-size: 2rem;
+    background: #fff;
+    border: .1rem solid #111;
+    padding: .4rem .3rem;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+.resetScore{
+    display: flex;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background: #1a252c;
+    padding: .5rem;
+    align-content: center;
+    margin: 1rem;
+    border-radius: .6rem;
+}
+#resetBtn{
+    font-size: 1rem;
+    background: #fff;
+    border: .1rem solid #111;
+    padding: .4rem .3rem;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+#resetBtn:hover{
+    background: #111;
+    color: #fff;
+    border-color: #fff;
+}
+.result button:hover{
+    background: #111;
+    color: #fff;
+    border-color: #fff;
+}
+
+.cell:nth-child(-n + 3){
+    border-top: none;
+}
+.cell:nth-child(3n){
+    border-right: none;
+}
+.cell:nth-child(3n - 2){
+    border-left: none;
+}
+.cell:nth-child(n + 7){
+    border-bottom: none;
+}
+

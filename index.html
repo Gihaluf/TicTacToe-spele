@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="lv">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+        <title>DESU spēle</title>
+    </head>
+    <body>
+        <div id="main-menu" class="main-menu show">
+            <p>Ievadi spēlētāja X vārdu</p>
+            <input id="user1"  type="text" placeholder="Ievadi vārdu">
+            <p>Ievadi spēlētāja O vārdu</p>
+            <input id="user2" type="text" placeholder="Ievadi vārdu">
+            <button id="startButton">Sākt spēli</button>
+        </div>
+
+        <div class="krasas"><button id="startColors" class="btn">Krāsu maiņa</button></div>
+
+         <div class="swap"><button id="swapbtn" class="btn">Samainīt gājienu</button></div>
+        
+        <div class="apraksti">
+            <h1 id="virsraksts">DESU spēle</h1>
+            <p>Spēlētāja <span id="display"></span> gājiens</p>
+            <p id="laiks"></p>
+        </div>
+        <div class="board">
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+        </div>
+
+        <div class="logs" id="logs"></div>
+        <div class="result" id="resultBox">
+            <div class="resultInfo"></div>
+            <div class="score"></div>
+            <button id="restartBtn" class="btn">Spēlēt vēlreiz</button>
+            <div class="resetScore">
+                <button id="resetBtn"><i class="fa-solid fa-arrow-rotate-left"></i></button>
+            </div>
+        </div>
+    </body>
+</html>
